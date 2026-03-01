@@ -19,3 +19,72 @@
 #Player two's highest number is 8 at index 1
 #Player one's lowest number is 1 at index 4
 #Player two's lowest number is 1 at index 5
+
+#List 1
+print("Are you ready to Duel, Player 1 and Player 2?")
+
+import random
+
+player1List = []
+
+for i in range(10):
+    player1List.append(random.randint(1, 50))
+    
+print(f"Player 1's Numbers are: " + str(player1List))
+
+#List 2
+import random
+
+player2List = []
+
+for i in range(10):
+    player2List.append(random.randint(1, 50))
+    
+print(f"Player 2's Numbers are: " + str(player2List))
+
+#Compare Lists and display wins
+player1Wins = 0
+player2Wins = 0
+
+for i in range(len(player1List)):
+    if player1List[i] == player2List[i]:
+        player2Wins += 0
+
+for i in range(len(player1List)):
+    if player1List[i] > player2List[i]:
+        player1Wins += 1
+
+for i in range(len(player1List)):
+    if player1List[i] < player2List[i]:
+        player2Wins += 1
+
+print(f"Player 1 won " + str(player1Wins) + " times")
+print(f"Player 2 won " + str(player2Wins) + " times")
+
+#Highest numbers and index for players
+player1Highest_num = max(player1List)
+player1Highest_index = player1List.index(player1Highest_num)
+
+player2Highest_num = max(player2List)
+player2Highest_index = player2List.index(player2Highest_num)
+
+#Lowest numbers and index for players
+player1Lowest_num = min(player1List)
+player1Lowest_index = player1List.index(player1Lowest_num)
+
+player2Lowest_num = min(player2List)
+player2Lowest_index = player2List.index(player2Lowest_num)
+
+#Print High Results
+print(f"Player 1's Highest number is " + str(player1Highest_num) + " at index " + str(player1Highest_index) + ".")
+print(f"Player 2's Highest number is " + str(player2Highest_num) + " at index " + str(player2Highest_index) + ".")
+
+#Print Low Results
+print(f"Player 1's Lowest number is " + str(player1Lowest_num) + " at index " + str(player1Lowest_index) + ".")
+print(f"Player 2's Lowest number is " + str(player2Lowest_num) + " at index " + str(player2Lowest_index) + ".")
+
+
+
+
+
+
